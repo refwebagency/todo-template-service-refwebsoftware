@@ -37,6 +37,16 @@ namespace TodoTemplateService.Data
 
         }
 
+        public IEnumerable<TodoTemplate> GetTodoTemplateByProjectTypeId(int id)
+        {
+            return _context.todoTemplate.Where(pt => pt.ProjectTypeId == id).ToList();
+        }
+
+        public IEnumerable<TodoTemplate> GetTodoTemplateBySpecId(int id)
+        {
+            return _context.todoTemplate.Where(s => s.SpecId == id).ToList();
+        }
+
         public TodoTemplate GetTodoTemplateById(int id)
         {
             return _context.todoTemplate.FirstOrDefault(t => t.Id == id);
@@ -51,8 +61,6 @@ namespace TodoTemplateService.Data
                 _context.Entry(todoTemplateItem).State = EntityState.Modified;
 
         }
-
-
 
 
         public void DeleteTodoTemplateById(int id)

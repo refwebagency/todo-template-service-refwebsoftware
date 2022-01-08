@@ -54,6 +54,38 @@ namespace TodoTemplateService.Controllers
 
         }
 
+        // Ici on Get une tache par l'ID de projectType.
+        [HttpGet("id", Name = "GetTodoTemplateByProjectTypeId")]
+        public ActionResult<TodoTemplateReadDto> GetTodoTemplateByProjectTypeId(int id)
+        {
+            // Initialisation d'une variable qui recupere depuis le repo la methode GetTaskByProjectTypeId
+            var todoTemplateItem = _repository.GetTodoTemplateByProjectTypeId(id);
+            // Je lui donne une condition que si la tache par Id n'est pas null alors tu retournes un status 200 avec la tache
+            // en question grace a l'autoMapper.
+            if(todoTemplateItem != null){
+                return Ok(_mapper.Map<TodoTemplateReadDto>(todoTemplateItem));
+            }else{
+                return NotFound();
+            }
+
+        }
+
+        // Ici on Get une tache par l'ID de Specialization.
+        [HttpGet("id", Name = "GetTodoTemplateBySpecId")]
+        public ActionResult<TodoTemplateReadDto> GetTodoTemplateBySpecId(int id)
+        {
+            // Initialisation d'une variable qui recupere depuis le repo la methode GetTaskBySpecId
+            var todoTemplateItem = _repository.GetTodoTemplateBySpecId(id);
+            // Je lui donne une condition que si la tache par Id n'est pas null alors tu retournes un status 200 avec la tache
+            // en question grace a l'autoMapper.
+            if(todoTemplateItem != null){
+                return Ok(_mapper.Map<TodoTemplateReadDto>(todoTemplateItem));
+            }else{
+                return NotFound();
+            }
+
+        }
+
         // Ici on requete avec le methode Post ( HttpPost ) pour envoyer les données afin de créé une nouvelle tache
         // En passant par schema du Dto
         [HttpPost]
@@ -71,6 +103,7 @@ namespace TodoTemplateService.Controllers
             return CreatedAtRoute(nameof(GetTodoTemplateById), new { id = TodoTemplateReadDto.Id }, TodoTemplateReadDto); 
 
         }
+
         // Ici je requete avec la methode Put avec en parametre la route 'update/id'
        [HttpPut("updapte/id", Name = "UpdateTodoTemplate")]
         public ActionResult<TodoTemplateReadDto> UpdateTodoTemplateById(int id, TodoTemplateUpdateDto todoTemplateUpdateDto)

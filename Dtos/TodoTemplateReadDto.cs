@@ -12,8 +12,8 @@ namespace TodoTemplateService.Dtos
 
         public int Time { get; set; }
 
-        // public Specialization
+        public int SpecId { get; set; }
 
-        // public Template
+        public int ProjectTypeId { get; set;}
     }
 }
