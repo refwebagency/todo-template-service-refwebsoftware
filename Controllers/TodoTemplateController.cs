@@ -6,7 +6,9 @@ using AutoMapper;
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Threading.Tasks;
 namespace TodoTemplateService.Controllers
 {
     [ApiController]
@@ -17,13 +19,14 @@ namespace TodoTemplateService.Controllers
         // Ici on Type avec la propriété readonly afin de recuperer les methode du Repo et du IMapper 
         private readonly ITodoTemplateRepo _repository;
         private readonly IMapper _mapper;
+        private readonly HttpClient _HttpClient;
 
-        public TodoTemplateController(ITodoTemplateRepo repository, IMapper mapper)
+        public TodoTemplateController(ITodoTemplateRepo repository, IMapper mapper, HttpClient HttpClient)
         {
 
             _repository = repository;
             _mapper = mapper;
-
+            _HttpClient = HttpClient;
         }
 
         // Ici nous requettons une liste de taches en passant par le DTO qui nous sert de schema pour lire les taches.
@@ -54,20 +57,54 @@ namespace TodoTemplateService.Controllers
 
         }
 
+        // Ici on Get une tache par l'ID.
+        [HttpGet("projectType/id", Name = "GetTodoTemplateByProjectType")]
+        public ActionResult<TodoTemplateReadDto> GetTodoTemplateByProjectType(int id)
+        {
+            // Initialisation d'une variable qui recupere depuis le repo la methode GetTaskById
+            var todoTemplateItem = _repository.GetTodoTemplateByProjectType(id);
+            // Je lui donne une condition que si la tache par Id n'est pas null alors tu retournes un status 200 avec la tache
+            // en question grace a l'autoMapper.
+            if(todoTemplateItem != null){
+                return Ok(_mapper.Map<TodoTemplateReadDto>(todoTemplateItem));
+            }else{
+                return NotFound();
+            }
+
+        }
+
         // Ici on requete avec le methode Post ( HttpPost ) pour envoyer les données afin de créé une nouvelle tache
         // En passant par schema du Dto
         [HttpPost]
-        public ActionResult<TodoTemplateReadDto> CreateTodoTemplate(TodoTemplateCreateDto todoTemplateCreateDto){
+        public async Task<ActionResult<TodoTemplateReadDto>> CreateTodoTemplate(TodoTemplateCreateDto todoTemplateCreateDto){
 
-            // On initialise une variable ou l'on stock le model de creation de la tache
             var todoTemplateModel = _mapper.Map<TodoTemplate>(todoTemplateCreateDto);
-            // Ici on recupere la méthode du repo CreateTodo.
+
+            var getSpecialization = await _HttpClient.GetAsync("https://localhost:1111/Specialization/" + todoTemplateModel.SpecializationId);
+            var getProjectType = await _HttpClient.GetAsync("https://localhost:1113/ProjectType/" + todoTemplateModel.ProjectTypeId);
+
+            var deserializeSpecialization = JsonConvert.DeserializeObject<CreateSpecializationDTO>(
+                    await getSpecialization.Content.ReadAsStringAsync());
+
+            var deserializeProjectType = JsonConvert.DeserializeObject<ProjectTypeCreateDto>(
+                    await getProjectType.Content.ReadAsStringAsync());       
+
+            var SpecializationDTO = _mapper.Map<Specialization>(deserializeSpecialization);
+            var ProjectTypetDTO = _mapper.Map<ProjectType>(deserializeProjectType);
+
+            var specialization = _repository.GetSpecializationById(SpecializationDTO.Id);
+            var projectType = _repository.GetProjectTypeById(ProjectTypetDTO.Id);
+
+            if (specialization == null) todoTemplateModel.Specialization = SpecializationDTO; else todoTemplateModel.Specialization = specialization;
+
+            if (projectType == null) todoTemplateModel.ProjectType = ProjectTypetDTO; else todoTemplateModel.ProjectType = projectType;
+
             _repository.CreateTodoTemplate(todoTemplateModel);
-            // On recupere la methode SaveChanges du repo.
+
             _repository.SaveChanges();
-            // On stock dans une variable le schema pour lire la nouvelle tache enregistré précedemment.
+
             var TodoTemplateReadDto = _mapper.Map<TodoTemplateReadDto>(todoTemplateModel);
-            // La CreatedAtRoute méthode est destinée à renvoyer un URI à la ressource nouvellement créée lorsque vous appelez une méthode POST pour stocker un nouvel objet.
+
             return CreatedAtRoute(nameof(GetTodoTemplateById), new { id = TodoTemplateReadDto.Id }, TodoTemplateReadDto); 
 
         }

@@ -32,14 +32,34 @@ namespace TodoTemplateService.Data
 
         public IEnumerable<TodoTemplate> GetAllTodoTemplates()
         {
-            // Retourne une liste de taches par raport au context
+            _context.Specialization.ToList();
+            _context.ProjectType.ToList();
             return _context.todoTemplate.ToList();
 
         }
 
         public TodoTemplate GetTodoTemplateById(int id)
         {
+            _context.Specialization.ToList();
+            _context.ProjectType.ToList();
             return _context.todoTemplate.FirstOrDefault(t => t.Id == id);
+        }
+
+        public TodoTemplate GetTodoTemplateByProjectType(int id)
+        {
+            _context.Specialization.ToList();
+            _context.ProjectType.ToList();
+            return _context.todoTemplate.FirstOrDefault(t => t.ProjectTypeId == id);
+        }
+
+        public Specialization GetSpecializationById(int id)
+        {
+            return _context.Specialization.FirstOrDefault(s => s.Id == id);
+        }
+
+        public ProjectType GetProjectTypeById(int id)
+        {
+            return _context.ProjectType.FirstOrDefault(p => p.Id == id);
         }
 
         public void UpdateTodoTemplateById(int id)
@@ -51,9 +71,6 @@ namespace TodoTemplateService.Data
                 _context.Entry(todoTemplateItem).State = EntityState.Modified;
 
         }
-
-
-
 
         public void DeleteTodoTemplateById(int id)
         {

@@ -5,16 +5,22 @@ namespace TodoTemplateService.Data
 {
     public interface ITodoTemplateRepo
     {
-         bool SaveChanges();
+        bool SaveChanges();
 
-         IEnumerable<TodoTemplate> GetAllTodoTemplates();
+        IEnumerable<TodoTemplate> GetAllTodoTemplates();
 
-         TodoTemplate GetTodoTemplateById(int id);
+        TodoTemplate GetTodoTemplateById(int id);
 
-         void CreateTodoTemplate(TodoTemplate todoTemplate);
+        Specialization GetSpecializationById(int id);
 
-         void UpdateTodoTemplateById(int id);
+        ProjectType GetProjectTypeById(int id);
 
-         void DeleteTodoTemplateById(int id);
+        TodoTemplate GetTodoTemplateByProjectType(int id);
+
+        void CreateTodoTemplate(TodoTemplate todoTemplate);
+
+        void UpdateTodoTemplateById(int id);
+
+        void DeleteTodoTemplateById(int id);
     }
 }

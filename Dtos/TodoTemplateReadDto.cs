@@ -1,3 +1,4 @@
+using TodoTemplateService.Models;
 namespace TodoTemplateService.Dtos
 {
     public class TodoTemplateReadDto
@@ -12,8 +13,12 @@ namespace TodoTemplateService.Dtos
 
         public int Time { get; set; }
 
-        // public Specialization
+        public int SpecializationId  { get; set; }
 
-        // public Template
+        public Specialization Specialization { get; set; }
+
+        public int ProjectTypeId { get; set; }
+
+        public ProjectType ProjectType { get; set; }
     }
 }

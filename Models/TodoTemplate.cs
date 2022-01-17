@@ -20,8 +20,16 @@ namespace TodoTemplateService.Models
         [Required]
         public int Time { get; set; }
 
-        // public Specialization
+        [Required]
+        public int SpecializationId  { get; set; }
 
-        // public Template
+        public Specialization Specialization { get; set; }
+
+        [Required]
+        public int ProjectTypeId { get; set; }
+
+        public ProjectType ProjectType { get; set; }
+
+        
     }
 }

@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using TodoTemplateService.Data;
+using TodoTemplateService.Controllers;
 
 namespace TodoTemplateService
 {
@@ -31,7 +32,7 @@ namespace TodoTemplateService
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("todoTemplate"));
 
             services.AddScoped<ITodoTemplateRepo, TodoTemplateRepo>();
-
+            services.AddHttpClient<TodoTemplateController>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
