@@ -80,8 +80,8 @@ namespace TodoTemplateService.Controllers
 
             var todoTemplateModel = _mapper.Map<TodoTemplate>(todoTemplateCreateDto);
 
-            var getSpecialization = await _HttpClient.GetAsync("https://localhost:1111/Specialization/" + todoTemplateModel.SpecializationId);
-            var getProjectType = await _HttpClient.GetAsync("https://localhost:1113/ProjectType/" + todoTemplateModel.ProjectTypeId);
+            var getSpecialization = await _HttpClient.GetAsync("https://localhost:4001/Specialization/" + todoTemplateModel.SpecializationId);
+            var getProjectType = await _HttpClient.GetAsync("https://localhost:5001/ProjectType/" + todoTemplateModel.ProjectTypeId);
 
             var deserializeSpecialization = JsonConvert.DeserializeObject<CreateSpecializationDTO>(
                     await getSpecialization.Content.ReadAsStringAsync());
