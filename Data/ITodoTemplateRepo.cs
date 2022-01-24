@@ -22,5 +22,9 @@ namespace TodoTemplateService.Data
         void UpdateTodoTemplateById(int id);
 
         void DeleteTodoTemplateById(int id);
+
+        void UpdateProjectTypeById(int id);
+
+        void UpdateSpecializationById(int id);
     }
 }

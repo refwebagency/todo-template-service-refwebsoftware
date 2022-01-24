@@ -18,7 +18,12 @@ namespace TodoTemplateService.Profiles
 
             CreateMap<ProjectType, ProjectTypeReadDto>();
             CreateMap<ProjectTypeCreateDto, ProjectType>();
+
+            CreateMap<ProjectType, ProjectTypeUpdateDto>();
             CreateMap<ProjectTypeUpdateDto, ProjectType>();
+
+            CreateMap<Specialization, UpdateSpecializationAsyncDTO>();
+            CreateMap<UpdateSpecializationAsyncDTO, Specialization>();
         }
     }
 }

@@ -14,6 +14,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using TodoTemplateService.Data;
 using TodoTemplateService.Controllers;
+using TodoTemplateService.AsyncDataServices;
+using TodoTemplateService.EventProcessing;
 
 namespace TodoTemplateService
 {
@@ -33,7 +35,8 @@ namespace TodoTemplateService
 
             services.AddScoped<ITodoTemplateRepo, TodoTemplateRepo>();
             services.AddHttpClient<TodoTemplateController>();
-
+            services.AddHostedService<MessageBusSuscriber>();
+            services.AddTransient<IEventProcessor, EventProcessor>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
             services.AddSwaggerGen(c =>

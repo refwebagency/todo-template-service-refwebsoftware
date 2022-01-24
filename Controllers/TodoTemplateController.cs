@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+
 namespace TodoTemplateService.Controllers
 {
     [ApiController]
@@ -20,13 +22,15 @@ namespace TodoTemplateService.Controllers
         private readonly ITodoTemplateRepo _repository;
         private readonly IMapper _mapper;
         private readonly HttpClient _HttpClient;
+        private readonly IConfiguration _configuration;
 
-        public TodoTemplateController(ITodoTemplateRepo repository, IMapper mapper, HttpClient HttpClient)
+        public TodoTemplateController(ITodoTemplateRepo repository, IMapper mapper, HttpClient HttpClient, IConfiguration configuration)
         {
 
             _repository = repository;
             _mapper = mapper;
             _HttpClient = HttpClient;
+            _configuration = configuration;
         }
 
         // Ici nous requettons une liste de taches en passant par le DTO qui nous sert de schema pour lire les taches.
@@ -80,8 +84,8 @@ namespace TodoTemplateService.Controllers
 
             var todoTemplateModel = _mapper.Map<TodoTemplate>(todoTemplateCreateDto);
 
-            var getSpecialization = await _HttpClient.GetAsync("https://localhost:4001/Specialization/" + todoTemplateModel.SpecializationId);
-            var getProjectType = await _HttpClient.GetAsync("https://localhost:5001/ProjectType/" + todoTemplateModel.ProjectTypeId);
+            var getSpecialization = await _HttpClient.GetAsync($"{_configuration["SpecializationService"]}" + todoTemplateModel.SpecializationId);
+            var getProjectType = await _HttpClient.GetAsync($"{_configuration["ProjectTypeService"]}" + todoTemplateModel.ProjectTypeId);
 
             var deserializeSpecialization = JsonConvert.DeserializeObject<CreateSpecializationDTO>(
                     await getSpecialization.Content.ReadAsStringAsync());

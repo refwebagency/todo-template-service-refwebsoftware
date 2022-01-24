@@ -73,3 +73,4 @@ C:\Users\wuill\OneDrive\Documents\GitHub\todo-template-service-refwebsoftware\ob
 C:\Users\wuill\OneDrive\Documents\GitHub\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.csproj.CopyComplete
 C:\Users\wuill\OneDrive\Documents\GitHub\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.genruntimeconfig.cache
 C:\Users\wuill\OneDrive\Documents\GitHub\todo-template-service-refwebsoftware\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\wuill\OneDrive\Documents\GitHub\todo-template-service-refwebsoftware\bin\Debug\net5.0\RabbitMQ.Client.dll

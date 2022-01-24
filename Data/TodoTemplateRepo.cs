@@ -72,6 +72,21 @@ namespace TodoTemplateService.Data
 
         }
 
+        public void UpdateProjectTypeById(int id)
+        {
+            var projectType = _context.ProjectType.FirstOrDefault(projectType => projectType.Id == id);
+
+            _context.Entry(projectType).State = EntityState.Modified;
+        }
+
+        public void UpdateSpecializationById(int id)
+        {
+            var specializationItem = _context.Specialization.Find(id);
+
+            _context.Entry(specializationItem).State = EntityState.Modified;
+        }
+
+
         public void DeleteTodoTemplateById(int id)
         {
             // La méthode Find() recherche l'élément correspondant au paramètre spécifié.
