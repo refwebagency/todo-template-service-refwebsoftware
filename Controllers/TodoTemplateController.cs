@@ -46,7 +46,7 @@ namespace TodoTemplateService.Controllers
 
 
         // Ici on Get une tache par l'ID.
-        [HttpGet("id", Name = "GetTodoTemplateById")]
+        [HttpGet("{id}", Name = "GetTodoTemplateById")]
         public ActionResult<TodoTemplateReadDto> GetTodoTemplateById(int id)
         {
             // Initialisation d'une variable qui recupere depuis le repo la methode GetTaskById

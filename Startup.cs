@@ -52,7 +52,10 @@ namespace TodoTemplateService
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoTemplateService v1"));
+                app.UseSwaggerUI(c =>{ 
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoTemplateService v1");
+                    c.InjectStylesheet("/swagger-ui/SwaggerDark.css");
+                });
             }
 
             app.UseHttpsRedirection();
@@ -60,6 +63,8 @@ namespace TodoTemplateService
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {

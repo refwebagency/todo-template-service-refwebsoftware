@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\todo-template-service-refwebsoftware\\TodoTemplateService.csproj": {}
+    "C:\\Users\\Maxime\\Desktop\\RefWebLogiciel - Services\\todo-template-service-refwebsoftware\\TodoTemplateService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\todo-template-service-refwebsoftware\\TodoTemplateService.csproj": {
+    "C:\\Users\\Maxime\\Desktop\\RefWebLogiciel - Services\\todo-template-service-refwebsoftware\\TodoTemplateService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\todo-template-service-refwebsoftware\\TodoTemplateService.csproj",
+        "projectUniqueName": "C:\\Users\\Maxime\\Desktop\\RefWebLogiciel - Services\\todo-template-service-refwebsoftware\\TodoTemplateService.csproj",
         "projectName": "TodoTemplateService",
-        "projectPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\todo-template-service-refwebsoftware\\TodoTemplateService.csproj",
-        "packagesPath": "C:\\Users\\wuill\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wuill\\OneDrive\\Documents\\GitHub\\todo-template-service-refwebsoftware\\obj\\",
+        "projectPath": "C:\\Users\\Maxime\\Desktop\\RefWebLogiciel - Services\\todo-template-service-refwebsoftware\\TodoTemplateService.csproj",
+        "packagesPath": "C:\\Users\\Maxime\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maxime\\Desktop\\RefWebLogiciel - Services\\todo-template-service-refwebsoftware\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wuill\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Maxime\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
