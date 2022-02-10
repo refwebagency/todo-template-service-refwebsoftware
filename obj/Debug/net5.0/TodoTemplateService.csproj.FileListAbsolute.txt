@@ -113,3 +113,42 @@ C:\Users\Maxime\Desktop\RefWebLogiciel - Services\todo-template-service-refwebso
 C:\Users\Maxime\Desktop\RefWebLogiciel - Services\todo-template-service-refwebsoftware\obj\Debug\net5.0\ref\TodoTemplateService.dll
 C:\Users\Maxime\Desktop\RefWebLogiciel - Services\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.pdb
 C:\Users\Maxime\Desktop\RefWebLogiciel - Services\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.genruntimeconfig.cache
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\appsettings.json
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\TodoTemplateService.exe
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\TodoTemplateService.deps.json
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\TodoTemplateService.runtimeconfig.json
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\TodoTemplateService.runtimeconfig.dev.json
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\TodoTemplateService.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\ref\TodoTemplateService.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\TodoTemplateService.pdb
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Humanizer.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.csproj.AssemblyReference.cache
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.AssemblyInfoInputs.cache
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.AssemblyInfo.cs
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.csproj.CoreCompileInputs.cache
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\staticwebassets\TodoTemplateService.StaticWebAssets.Manifest.cache
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\staticwebassets\TodoTemplateService.StaticWebAssets.xml
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\scopedcss\bundle\TodoTemplateService.styles.css
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.RazorTargetAssemblyInfo.cache
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.csproj.CopyComplete
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\ref\TodoTemplateService.dll
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.pdb
+C:\Users\nicor\Bureau\Stage Dreamoove - RefWeb\Ref-Web\todo-template-service-refwebsoftware\obj\Debug\net5.0\TodoTemplateService.genruntimeconfig.cache
