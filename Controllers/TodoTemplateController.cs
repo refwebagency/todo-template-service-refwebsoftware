@@ -113,7 +113,7 @@ namespace TodoTemplateService.Controllers
 
         }
         // Ici je requete avec la methode Put avec en parametre la route 'update/id'
-       [HttpPut("updapte/id", Name = "UpdateTodoTemplate")]
+       [HttpPut("updapte/{id}", Name = "UpdateTodoTemplate")]
         public ActionResult<TodoTemplateReadDto> UpdateTodoTemplateById(int id, TodoTemplateUpdateDto todoTemplateUpdateDto)
         {
             // On initalise une variage qui recupere depuis le repo la methode GetTodoTemplateById

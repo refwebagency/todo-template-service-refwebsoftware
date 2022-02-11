@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using TodoTemplateService.Models;
 
 namespace TodoTemplateService.Dtos
 {
@@ -20,7 +21,9 @@ namespace TodoTemplateService.Dtos
         [Required]
         public int SpecializationId  { get; set; }
 
+
         [Required]
         public int ProjectTypeId { get; set; }
+
     }
 }
